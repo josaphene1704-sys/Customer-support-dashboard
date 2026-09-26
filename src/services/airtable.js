@@ -1,6 +1,7 @@
 const API_URL = 'https://api.airtable.com/v0'
 
-const TOKEN = import.meta.env.VITE_AIRTABLE_TOKEN
+// The token is only read in dev mode, so production builds (GitHub Pages) never contain it
+const TOKEN = import.meta.env.DEV ? import.meta.env.VITE_AIRTABLE_TOKEN : undefined
 const BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID
 const CUSTOMERS_TABLE = import.meta.env.VITE_AIRTABLE_CUSTOMERS_TABLE
 

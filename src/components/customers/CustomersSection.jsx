@@ -30,7 +30,11 @@ export default function CustomersSection() {
         {!configured ? (
           <EmptyState
             title="Airtable is not connected"
-            description="Add VITE_AIRTABLE_TOKEN, VITE_AIRTABLE_BASE_ID and VITE_AIRTABLE_CUSTOMERS_TABLE to .env.local."
+            description={
+              import.meta.env.DEV
+                ? 'Add VITE_AIRTABLE_TOKEN, VITE_AIRTABLE_BASE_ID and VITE_AIRTABLE_CUSTOMERS_TABLE to .env.local.'
+                : 'Live Airtable data is available when running the dashboard locally (npm run dev), to keep the API token private.'
+            }
           />
         ) : error ? (
           <EmptyState
