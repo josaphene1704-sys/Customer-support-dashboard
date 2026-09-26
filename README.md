@@ -1,16 +1,42 @@
-# React + Vite
+# 🎧 Customer Support Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive dashboard for customer support teams: live KPIs, a searchable and filterable tickets table with inline status updates, and real-time analytics charts.
 
-Currently, two official plugins are available:
+**Live demo:** https://josaphene1704-sys.github.io/support-dashboard/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **KPI cards** — total, open, resolved today, average response time, CSAT and urgent tickets, with week-over-week trends
+- **Tickets table** — search (ID, customer, email, subject), filters (status, priority, channel, agent, date), sorting and pagination
+- **Status updates** — change status inline or from the details drawer, with toast notifications and Undo
+- **Real-time analytics** — tickets over time, status distribution, channel breakdown and agent performance
+- **Live simulation** — a new ticket arrives every 10–15 seconds (pause/resume from the header)
+- **Dark mode**, responsive layout, and changes saved in `localStorage`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the Oxlint configuration
+React · Vite · Tailwind CSS v4 · lucide-react · Recharts · date-fns · react-hot-toast
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173/support-dashboard/
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the dev server |
+| `npm run build` | Build for production into `dist/` |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Lint with oxlint |
+
+## Deployment
+
+Every push to `main` builds and deploys the site to GitHub Pages via `.github/workflows/deploy.yml`.
+
+See [SPEC.MD](./SPEC.MD) for the full product specification.
