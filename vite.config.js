@@ -5,5 +5,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/support-dashboard/', // must match the GitHub repository name
+  base: '/Customer-support-dashboard/', // must match the GitHub repository name
 })

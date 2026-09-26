@@ -12,7 +12,7 @@
 - Keep components under ~150 lines; extract sub-components when larger
 
 ## Commands
-- Dev server: npm run dev  (opens at http://localhost:5173/support-dashboard/)
+- Dev server: npm run dev  (opens at http://localhost:5173/Customer-support-dashboard/)
 - Build: npm run build
 - Preview build: npm run preview
 

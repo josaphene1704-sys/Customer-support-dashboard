@@ -2,7 +2,7 @@
 
 An interactive dashboard for customer support teams: live KPIs, a searchable and filterable tickets table with inline status updates, and real-time analytics charts.
 
-**Live demo:** https://josaphene1704-sys.github.io/support-dashboard/
+**Live demo:** https://josaphene1704-sys.github.io/Customer-support-dashboard/
 
 ## Features
 
@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:5173/support-dashboard/
+Then open http://localhost:5173/Customer-support-dashboard/
 
 ## Scripts
 
