@@ -34,9 +34,12 @@ Then open http://localhost:5173/Customer-support-dashboard/
 | `npm run build` | Build for production into `dist/` |
 | `npm run preview` | Preview the production build |
 | `npm run lint` | Lint with oxlint |
+| `npm run deploy` | Build and publish to GitHub Pages |
 
 ## Deployment
 
-Every push to `main` builds and deploys the site to GitHub Pages via `.github/workflows/deploy.yml`.
+`npm run deploy` builds the project and pushes `dist/` to the `gh-pages` branch using [gh-pages](https://www.npmjs.com/package/gh-pages).
+
+GitHub Pages settings: **Settings → Pages → Source: Deploy from a branch → `gh-pages` / `(root)`**.
 
 See [SPEC.MD](./SPEC.MD) for the full product specification.
