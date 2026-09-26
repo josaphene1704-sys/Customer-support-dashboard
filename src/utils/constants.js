@@ -6,6 +6,20 @@ export const STATUSES = [
   { value: 'closed', label: 'Closed', badge: 'bg-slate-200 text-slate-700 dark:bg-slate-500/20 dark:text-slate-300', color: '#64748b' },
 ]
 
+// Chart colors — validated for color-blind separation, stepped separately for each theme
+export const CHART_COLORS = {
+  light: {
+    series1: '#2a78d6', series2: '#1baf7a',
+    status: { open: '#2a78d6', in_progress: '#eda100', pending: '#4a3aa7', resolved: '#1baf7a', closed: '#eb6834' },
+    grid: '#e2e8f0', axis: '#64748b', surface: '#ffffff',
+  },
+  dark: {
+    series1: '#3987e5', series2: '#199e70',
+    status: { open: '#3987e5', in_progress: '#c98500', pending: '#9085e9', resolved: '#199e70', closed: '#d95926' },
+    grid: '#1e293b', axis: '#94a3b8', surface: '#0f172a',
+  },
+}
+
 export const PRIORITIES = [
   { value: 'low', label: 'Low', rank: 0, badge: 'bg-slate-100 text-slate-600 dark:bg-slate-500/15 dark:text-slate-300' },
   { value: 'medium', label: 'Medium', rank: 1, badge: 'bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-300' },

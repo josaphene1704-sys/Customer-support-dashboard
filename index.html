@@ -11,7 +11,7 @@
     <script>
       // Apply saved theme before first paint to avoid a flash
       try {
-        const saved = localStorage.getItem('theme')
+        const saved = JSON.parse(localStorage.getItem('theme'))
         const dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches
         if (dark) document.documentElement.classList.add('dark')
       } catch {}

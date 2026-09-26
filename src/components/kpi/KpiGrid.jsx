@@ -7,7 +7,7 @@ export default function KpiGrid({ tickets }) {
   const kpi = useKpis(tickets)
 
   return (
-    <section aria-label="Key metrics" className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+    <section aria-label="Key metrics" className="grid grid-cols-2 gap-4 md:grid-cols-3 2xl:grid-cols-6">
       <KpiCard icon={Ticket} title="Total Tickets" value={formatNumber(kpi.total)} trend={kpi.totalTrend} trendLabel="new vs last week" accent="indigo" />
       <KpiCard icon={Inbox} title="Open Tickets" value={formatNumber(kpi.open)} hint={`${kpi.unassigned} unassigned`} accent="blue" />
       <KpiCard icon={CheckCircle2} title="Resolved Today" value={formatNumber(kpi.resolvedToday)} trend={kpi.resolvedTodayTrend} trendLabel="vs yesterday" accent="emerald" />

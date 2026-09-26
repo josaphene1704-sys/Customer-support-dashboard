@@ -14,7 +14,9 @@ export default function Header({ onOpenMenu, live, onToggleLive, dark, onToggleT
       </button>
 
       <div className="min-w-0">
-        <h1 className="truncate text-lg font-semibold">Support Dashboard</h1>
+        <h1 className="truncate text-lg font-semibold">
+          <span className="hidden sm:inline">Support </span>Dashboard
+        </h1>
         <p className="hidden text-xs text-slate-500 sm:block dark:text-slate-400">{today}</p>
       </div>
 
@@ -34,7 +36,7 @@ export default function Header({ onOpenMenu, live, onToggleLive, dark, onToggleT
           )}
         </button>
 
-        <div className="ml-1 flex size-9 items-center justify-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300" aria-label="Signed in as Agent">
+        <div className="ml-1 hidden size-9 sm:flex items-center justify-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300" aria-label="Signed in as Agent">
           AG
         </div>
       </div>

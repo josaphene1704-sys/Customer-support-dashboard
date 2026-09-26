@@ -41,7 +41,7 @@ export default function TicketFilters({ search, onSearch, filters, onFilter, sta
 
       {/* Search + dropdown filters */}
       <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
-        <SearchInput value={search} onChange={onSearch} placeholder="Search by ID, customer, email or subject" />
+        <SearchInput value={search} onChange={onSearch} placeholder="Search ID, customer, email…" />
         <div className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
           <FilterSelect label="Priority" value={filters.priority} onChange={(v) => onFilter('priority', v)} options={PRIORITIES} />
           <FilterSelect label="Channel" value={filters.channel} onChange={(v) => onFilter('channel', v)} options={CHANNELS} />

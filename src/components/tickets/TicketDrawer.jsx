@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Calendar, Clock, Mail, Star, User, X } from 'lucide-react'
+import { Calendar, Clock, Mail, MessageSquare, Star, User, X } from 'lucide-react'
 import ChannelIcon from '../ui/ChannelIcon'
 import { AGENTS, PRIORITIES } from '../../utils/constants'
 import { formatDuration, formatFullDate } from '../../utils/formatters'
@@ -87,14 +87,14 @@ export default function TicketDrawer({ ticket, onClose, onStatusChange, onUpdate
                 <Detail icon={Mail} label="Email">
                   <a href={`mailto:${ticket.customer.email}`} className="text-indigo-600 hover:underline dark:text-indigo-400">{ticket.customer.email}</a>
                 </Detail>
-                <Detail icon={Calendar} label="Channel"><ChannelIcon channel={ticket.channel} /></Detail>
+                <Detail icon={MessageSquare} label="Channel"><ChannelIcon channel={ticket.channel} /></Detail>
                 <Detail icon={Calendar} label="Created">{formatFullDate(ticket.createdAt)}</Detail>
                 <Detail icon={Clock} label="First response">{responseMinutes == null ? 'Awaiting response' : formatDuration(responseMinutes)}</Detail>
                 {ticket.resolvedAt && <Detail icon={Calendar} label="Resolved">{formatFullDate(ticket.resolvedAt)}</Detail>}
                 {ticket.satisfaction && (
                   <Detail icon={Star} label="Satisfaction">
                     <span className="text-amber-500" aria-label={`${ticket.satisfaction} out of 5`}>
-                      {'★'.repeat(ticket.satisfaction)}<span className="text-slate-300 dark:text-slate-600">{'★'.repeat(5 - ticket.satisfaction)}</span>
+                      {'ג˜…'.repeat(ticket.satisfaction)}<span className="text-slate-300 dark:text-slate-600">{'ג˜…'.repeat(5 - ticket.satisfaction)}</span>
                     </span>
                   </Detail>
                 )}
