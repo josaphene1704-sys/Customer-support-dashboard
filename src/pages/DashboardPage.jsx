@@ -1,4 +1,5 @@
 import ChartsSection from '../components/charts/ChartsSection'
+import CustomersSection from '../components/customers/CustomersSection'
 import KpiGrid from '../components/kpi/KpiGrid'
 import TicketsSection from '../components/tickets/TicketsSection'
 import { useTickets } from '../hooks/useTickets'
@@ -11,6 +12,7 @@ export default function DashboardPage() {
       <KpiGrid tickets={tickets} />
       <ChartsSection tickets={tickets} />
       <TicketsSection tickets={tickets} />
+      <CustomersSection />
     </div>
   )
 }
